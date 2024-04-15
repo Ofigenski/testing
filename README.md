@@ -9,8 +9,8 @@
 ### 1) Скопируйте приложение из репозитория
 ### 2) Перейдите в главный каталог с файлами
 ### 3) Выполните команду 'docker-compose up -d'
-### 4) Выполните команду 'composer install'
-### 5) Перейдите в контейнер PHP
+### 4) Выполните команду 'composer install' (на вопрос "Do you want to include Docker configuration from recipes?" отвечаем - n , т.е. нет)
+### 5) Перейдите в контейнер PHP (название контейнера можно увидеть командой "docker ps"), пример: docker exec -it "your_name_container" sh
 ### 6) Выполните команду 'bin/console d:mig:m -n'
 ### 7) Выполните команду 'bin/console app:load-questions'
 ### 8) Откройте в байзере страницу с адресом 'http://localhost/'
