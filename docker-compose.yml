@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+    nginx:
+        image: nginx:1.10
+        ports:
+            - "80:80"
+        volumes:
+            - ./infrastructure/docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./public:/var/www/html/public
+        depends_on:
+            - php
+        networks:
+            - app_network
+
+    php:
+        image: php:8.1-fpm-alpine
+        command: >
+            sh -c "apk add --no-cache postgresql-dev &&
+                   docker-php-ext-install pdo pdo_pgsql &&
+                   php-fpm"
+        volumes:
+            - .:/var/www/html
+        networks:
+            - app_network
+
+    postgres:
+        image: postgres:16.2-alpine
+        environment:
+            POSTGRES_DB: symfony
+            POSTGRES_USER: symfony
+            POSTGRES_PASSWORD: symfony
+        ports:
+            - "5432:5432"
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+            - ./infrastructure/docker/postgres/postgres_conf:/etc/postgresql
+        networks:
+            - app_network
+
+networks:
+    app_network:
+        driver: bridge
+
+volumes:
+    postgres_data:

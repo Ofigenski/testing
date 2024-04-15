@@ -1,0 +1,84 @@
+questions:
+    - text: "1 + 1 ="
+      answers:
+          - text: "3"
+            correct: false
+          - text: "2"
+            correct: true
+          - text: "0"
+            correct: false
+
+    - text: "2 + 2 ="
+      answers:
+          - text: "4"
+            correct: true
+          - text: "3 + 1"
+            correct: true
+          - text: "10"
+            correct: false
+
+    - text: "3 + 3 ="
+      answers:
+          - text: "1 + 5"
+            correct: true
+          - text: "1"
+            correct: false
+          - text: "6"
+            correct: true
+          - text: "2 + 4"
+            correct: true
+
+    - text: "4 + 4 ="
+      answers:
+          - text: "8"
+            correct: true
+          - text: "4"
+            correct: false
+          - text: "0"
+            correct: false
+          - text: "0 + 8"
+            correct: true
+
+    - text: "5 + 5 ="
+      answers:
+          - text: "6"
+            correct: false
+          - text: "18"
+            correct: false
+          - text: "10"
+            correct: true
+          - text: "9"
+            correct: false
+          - text: "0"
+            correct: false
+
+    - text: "6 + 6 ="
+      answers:
+          - text: "3"
+            correct: false
+          - text: "9"
+            correct: false
+          - text: "0"
+            correct: false
+          - text: "12"
+            correct: true
+          - text: "5 + 7"
+            correct: true
+
+    - text: "7 + 7 ="
+      answers:
+          - text: "5"
+            correct: false
+          - text: "14"
+            correct: true
+
+    - text: "8 + 8 ="
+      answers:
+          - text: "16"
+            correct: true
+          - text: "12"
+            correct: false
+          - text: "9"
+            correct: false
+          - text: "5"
+            correct: false
